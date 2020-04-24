@@ -1,0 +1,15 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.once('ready', () => {
+	console.log('Ready!');
+});
+
+client.login('NzAzMDcxODA4ODk4OTkwMjAw.XqKMFw.DZKn2hM4ZrKtFqs_xQo0zy4EqHs');
+client.on('message', message => {
+	console.log(message.content);
+});
+if (message.content === '!hi') {
+	// send back "Pong." to the channel the message was sent in
+	message.channel.send('Greetings Individual!');
+}
